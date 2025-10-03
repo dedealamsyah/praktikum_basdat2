@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Praktikum Basdat 2 </title>
+  <style>
+    body{font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial;margin:20px}
+    table{border-collapse:collapse;width:100%;margin-bottom:16px}
+    table,th,td{border:1px solid #aaa;padding:8px}
+    th{background:#f0f0f0}
+    form{margin-bottom:16px}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .note{background:#ffffe0;padding:10px;border:1px solid #eee}
+  </style>
+</head>
+<body>
+<h1>Praktikum Basis Data 2</h1>
+<p class="note">Menampilkan Data Query SQL di aplikasi web.</p>
+<p class="note">Nama : Dede Alamsyah | NIM : 1231213 | UNIPI</p>
+
+<h2>1. Tambah Mahasiswa</h2>
+<form method="post" action="proses.php">
+  <input type="hidden" name="action" value="add_mahasiswa">
+  <div class="grid">
+    <div><label>NIM<br><input name="nim" required></label></div>
+    <div><label>Nama<br><input name="nama" required></label></div>
+    <div><label>Jurusan<br><input name="jurusan"></label></div>
+    <div><label>Angkatan<br><input name="angkatan" type="number"></label></div>
+    <div><label>Umur<br><input name="umur" type="number"></label></div>
+  </div>
+  <p><button type="submit">Tambah Mahasiswa</button></p>
+</form>
+
+<h2>2. Tambah Nilai</h2>
+<form method="post" action="proses.php">
+  <input type="hidden" name="action" value="add_nilai">
+  <div class="grid">
+    <div><label>NIM<br><input name="nim_n" required></label></div>
+    <div><label>Mata Kuliah<br><input name="mata_kuliah" required></label></div>
+    <div><label>Nilai<br><input name="nilai" type="number" required></label></div>
+    <div><label>Kode Dosen<br><input name="kd_dosen"></label></div>
+    <div><label>Kode Ruang<br><input name="kd_ruang"></label></div>
+  </div>
+  <p><button type="submit">Tambah Nilai</button></p>
+</form>
+
+<p>Lihat data yang tersimpan di <a href="tampil.php">tampil.php</a></p>
+
+</body>
+</html>
